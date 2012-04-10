@@ -47,14 +47,10 @@ public class EtchASketch {
 		 frame.getContentPane().add(BorderLayout.WEST, getBorderPanel(100, 400));
 		 
 		 JPanel buttonsLeft = new JPanel();
-//		 buttonsLeft.setSize(300,300);
-//		 buttonsLeft.setLayout(new BoxLayout(buttonsLeft, BoxLayout.X_AXIS));
 		 buttonsLeft.add(left);
 		 buttonsLeft.add(right);
 		 
 		 JPanel buttonsRight = new JPanel();
-//		 buttonsRight.setSize(300,300);
-//		 buttonsRight.setLayout(new BoxLayout(buttonsRight, BoxLayout.Y_AXIS));
 		 buttonsRight.add(BorderLayout.NORTH, up);
 		 buttonsRight.add(BorderLayout.CENTER, down);
 		
@@ -74,7 +70,7 @@ public class EtchASketch {
 		JButton btn = new JButton(text);
 		btn.addActionListener(new moveCursor());
 		// removed the sizing, because my layout didn't honor it for both sets...
-//		btn.setPreferredSize(new Dimension(width, height));
+		// btn.setPreferredSize(new Dimension(width, height));
 		 
 	 	return btn;
 	}
@@ -110,42 +106,5 @@ public class EtchASketch {
 		public void actionPerformed(ActionEvent arg0) {
 			screen.shake();
 		}
-	}
-	
-
-	// OLD/DEPRECATED method used to build a multi-purpose button layout
-	//	this turned out to be incorrect, so I squashed the idea, but kep this for reference.
-	private void setupButtons(JPanel panel, JButton[] buttons) {
-		panel.setLayout(new GridBagLayout());
-	    GridBagConstraints c = new GridBagConstraints();
-	    JButton button;
-	    
-	    c.gridx = 0;
-	    c.gridy = 0;
-	    c.fill = GridBagConstraints.HORIZONTAL;
-	    
-	    button = new JButton("-");
-//	    buttons.add(button, c);
-	    c.gridx = 1;
-	    panel.add(buttons[0], c);
-	    button = new JButton("-");
-	    c.gridx = 2;
-//	    buttons.add(button, c);
-	    
-	    c.gridy = 1;
-	    c.gridx = 0;
-	    panel.add(buttons[1], c);
-	    c.gridx = 2;
-	    panel.add(buttons[2], c);
-	    
-	    c.gridy = 2;
-	    c.gridx = 0;
-	    button = new JButton("-");
-//	    buttons.add(button, c);
-	    c.gridx = 1;
-	    panel.add(buttons[3], c);
-	    button = new JButton("-");
-	    c.gridx = 2;
-//	    buttons.add(button, c);
 	}
 }

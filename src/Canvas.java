@@ -33,7 +33,7 @@ public class Canvas extends JComponent {
 		points = new ArrayList<Rectangle>();
 	}
 	
-	// this renders the canvas, in all its glory
+	// this renders the canvas
 	public void paintComponent(Graphics g) {
 		// implement the default JComponent rendering first
 		super.paintComponents(g);
